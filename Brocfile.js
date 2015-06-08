@@ -17,4 +17,9 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-module.exports = app.toTree();
+var removeFile = require('broccoli-file-remover');
+
+module.exports = removeFile(app.toTree(), {
+    paths: ['app/modules/pod1', 'app/modules/pod2']
+});
+

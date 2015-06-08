@@ -6,6 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+    this.route('pod1');
+    this.route('pod2');
+    this.route('pod3');
 });
 
 export default Router;
